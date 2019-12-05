@@ -1,4 +1,3 @@
-import copy
 inp = open("inputs/day05.txt")
 inp = [int(ins) for ins in inp.read().split(",")]
 
