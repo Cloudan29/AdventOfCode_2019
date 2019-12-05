@@ -1,4 +1,4 @@
-inp = open("Cloudan29/inputs/day04.txt")
+inp = open("inputs/day04.txt")
 low, high = [int(num) for num in inp.read().split("-")]
 
 def part1():

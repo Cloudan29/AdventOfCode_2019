@@ -1,4 +1,4 @@
-inp = open("Cloudan29/inputs/day01.txt")
+inp = open("inputs/day01.txt")
 modules_mass = [int(m) for m in inp.read().split("\n")]
 
 def part1():

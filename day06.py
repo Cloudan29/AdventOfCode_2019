@@ -1,0 +1,1 @@
+inp = open("inputs/day06.txt")

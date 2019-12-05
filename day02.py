@@ -1,4 +1,4 @@
-inp = open("Cloudan29/inputs/day02.txt")
+inp = open("inputs/day02.txt")
 arr = inp.read().split(",")
 
 def part1(noun, verb):

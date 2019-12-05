@@ -1,4 +1,4 @@
-A,B = open("Cloudan29/inputs/day03.txt").read().split("\n")
+A,B = open("inputs/day03.txt").read().split("\n")
 A,B = [instructions.split(",") for instructions in [A,B]]
 dirs = {"R": (1,0), "L": (-1,0), "U": (0,1), "D": (0,-1)}
 
