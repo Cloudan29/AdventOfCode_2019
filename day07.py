@@ -33,7 +33,6 @@ def part2():
             if result[1]:
                 break
 
-        # TODO: Find out why in the world I'm getting 0 as last output for everything
         output_signals.append(input_signals[-2])
 
     return max(output_signals)
