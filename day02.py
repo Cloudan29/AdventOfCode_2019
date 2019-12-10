@@ -1,24 +1,16 @@
-inp = open("inputs/day02.txt")
-arr = inp.read().split(",")
+from intcode import *
+inp = open("inputs/day02.txt").read().split(",")
 
 def part1(noun, verb):
-    codes = [int(a) for a in arr]
-    codes[1] = noun
-    codes[2] = verb
-
-    for i in range(0,len(codes),4):
-        opcode = codes[i]
-        oper1 = codes[i+1]
-        oper2 = codes[i+2]
-        oper3 = codes[i+3]
-        if opcode == 99:
-            break
-        elif opcode == 1:
-            codes[oper3] = codes[oper1] + codes[oper2]
-        elif opcode == 2:
-            codes[oper3] = codes[oper1] * codes[oper2]
+    machine = Machine([int(ins) for ins in inp])
+    machine.code[1] = noun
+    machine.code[2] = verb
+    try:
+        machine.run_machine([])
+    except Interrupt:
+        pass
         
-    return codes[0]
+    return machine.code[0]
 
 def part2(target):
     for noun in range(100):
