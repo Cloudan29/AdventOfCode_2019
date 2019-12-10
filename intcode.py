@@ -7,7 +7,7 @@ class Interrupt(Exception):
 
 class Machine:
     def __init__(self, code):
-        self.code = code
+        self.code = code + [0 for _ in range(100000)]
         self.ip = 0
 
     def run_machine(self, inputs):

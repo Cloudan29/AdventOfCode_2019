@@ -1,8 +1,8 @@
 from intcode import *
-inp = open("inputs/day05.txt").read().split(",")
+inp = [int(ins) for ins in open("inputs/day05.txt").read().split(",")]
 
 def part1():
-    machine = Machine([int(instr) for instr in inp])
+    machine = Machine([j for j in inp])
     interrupt = False
     while True:
         try:
@@ -13,7 +13,7 @@ def part1():
             break
 
 def part2():
-    machine = Machine([int(instr) for instr in inp])
+    machine = Machine([j for j in inp])
     while True:
         try:
             machine.run_machine([5])

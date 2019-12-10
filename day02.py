@@ -1,8 +1,8 @@
 from intcode import *
-inp = open("inputs/day02.txt").read().split(",")
+inp = [int(ins) for ins in open("inputs/day02.txt").read().split(",")]
 
 def part1(noun, verb):
-    machine = Machine([int(ins) for ins in inp])
+    machine = Machine([j for j in inp])
     machine.code[1] = noun
     machine.code[2] = verb
     try:
