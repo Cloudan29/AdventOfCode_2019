@@ -84,7 +84,7 @@ def part2():
     
     painted = [[' ' for _ in range(maxx-minx + 1)] for _ in range(maxy-miny + 1)]
     for cord in grid:
-        painted[cord[1]-miny][cord[0]-minx] = '#' if grid[cord] == 1 else ' '
+        painted[cord[1]-miny][cord[0]-minx] = '█' if grid[cord] == 1 else ' '
 
     painted.reverse()
     for row in painted:
