@@ -1,10 +1,25 @@
-inp = open("inputs/day09.txt").read()
+from intcode import *
+inp = [int(ins) for ins in open("inputs/day09.txt").read().split(",")]
 
 def part1():
-    pass
+    machine = Machine([j for j in inp])
+    while True:
+        try:
+            machine.run_machine([1])
+        except Output as e:
+            print (e.output)
+        except Interrupt:
+            break
 
 def part2():
-    pass
+    machine = Machine([j for j in inp])
+    while True:
+        try:
+            machine.run_machine([2])
+        except Output as e:
+            print (e.output)
+        except Interrupt:
+            break
 
-print (part1())
-print (part2())
+part1()
+part2()
