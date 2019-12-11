@@ -33,7 +33,7 @@ def part2():
         image += '\n'
         decoded = decoded[W:]
 
-    return image.replace('0', ' ')
+    return image.replace('0', ' ').replace('1', '█')
 
 
 print (part1())
