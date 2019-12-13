@@ -5,6 +5,9 @@ class Output(Exception):
 class Interrupt(Exception):
     pass
 
+class Input(Exception):
+    pass
+
 class Machine:
     def __init__(self, code):
         self.code = code + [0 for _ in range(100000)]
@@ -43,6 +46,8 @@ class Machine:
                 self.code[value3] = self.code[value1] * self.code[value2]
                 self.ip+=4
             elif opcode == 3:
+                if len(inputs) == 0:
+                    raise Input()
                 self.code[value1] = inputs.pop(0)
                 self.ip+=2
             elif opcode == 4:
