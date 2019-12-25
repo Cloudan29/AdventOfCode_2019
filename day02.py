@@ -1,4 +1,4 @@
-from intcode import *
+from intcode import Machine, Interrupt
 inp = [int(ins) for ins in open("inputs/day02.txt").read().split(",")]
 
 def part1(noun, verb):

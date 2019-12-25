@@ -1,9 +1,8 @@
-from intcode import *
+from intcode import Output, Interrupt, Machine
 inp = [int(ins) for ins in open("inputs/day05.txt").read().split(",")]
 
 def part1():
     machine = Machine([j for j in inp])
-    interrupt = False
     while True:
         try:
             machine.run_machine([1])

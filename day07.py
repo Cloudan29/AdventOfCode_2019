@@ -1,5 +1,5 @@
 import itertools
-from intcode import *
+from intcode import Machine, Output, Interrupt
 
 inp = [int(ins) for ins in open("inputs/day07.txt").read().split(",")]
 
