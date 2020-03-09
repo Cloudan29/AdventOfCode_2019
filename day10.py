@@ -1,3 +1,7 @@
+"""
+Still haven't finished part 2 to this one
+"""
+
 import datetime
 inp = open("inputs/day10.txt").read().split('\n')
 w = len(inp[0])
